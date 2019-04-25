@@ -1,3 +1,8 @@
 .History {
   text-align: center;
 }
+
+.Chip {
+  display: flex !important;
+  flex: 0 0 100%;
+}

@@ -7,12 +7,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <main>
-        <Status />
-        <History />
-      </main>
-    </div>
+    <main className="App">
+      <Status />
+      <History />
+    </main>
   );
 }
 

@@ -8,6 +8,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
+import { getDarkenColor, getColorFromStatus } from '../../utils'
+
 import './style.css';
 
 const styles = ({
@@ -20,15 +22,14 @@ const styles = ({
 });
 
 let id = 0;
-function createData(name, status) {
+function createData(name, date, status) {
   id += 1;
-  return { id, name, status };
+  return { id, name, date, status };
 }
 
 const rows = [
-  createData('Alex', 'progress'),
-  createData('Marc', 'done'),
-  createData('Peter', 'failed'),
+  createData('Marc', '13, April 2018 - 10:31', 'done'),
+  createData('Peter', '11, April 2018 - 15:02', 'failed'),
 ];
 
 function History(props) {
@@ -39,7 +40,8 @@ function History(props) {
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>developer</TableCell>
+            <TableCell colSpan="2">developer</TableCell>
+            <TableCell>date</TableCell>
             <TableCell align="right">status</TableCell>
           </TableRow>
         </TableHead>
@@ -47,12 +49,23 @@ function History(props) {
           {rows.map(row => (
           <TableRow key={row.id}>
               <TableCell component="th" scope="row">
-              {row.name}
+                {row.avatar}
               </TableCell>
               <TableCell align="right">
-              <Chip
+                {row.name}
+              </TableCell>
+              <TableCell align="right">
+                {row.date}
+              </TableCell>
+              <TableCell align="right">
+                <Chip
+                  className="Chip"
                   label={row.status}
-              />
+                  style={{
+                    background: getColorFromStatus(row.status),
+                    color: getDarkenColor(getColorFromStatus(row.status))
+                  }}
+                />
               </TableCell>
           </TableRow>
           ))}
