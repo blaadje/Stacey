@@ -1,0 +1,37 @@
+.wrapper {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background: white;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.05);
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pelletWrapper {
+  padding: 1.4rem;
+}
+
+.pellet {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 100%;
+}
+
+.arrowWrapper {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  border-right: 1px solid #e2e4eb;
+  padding: 0 0.6rem;
+}
+
+.arrow::before {
+  content: '⟩';
+  display: block;
+  font-size: 1.2rem;
+  transform: rotate(180deg);
+}
