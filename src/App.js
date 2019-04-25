@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
+
+import Chip from '@material-ui/core/Chip';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,6 +14,12 @@ import TableRow from '@material-ui/core/TableRow';
 import './App.css';
 
 const styles = ({
+  success: {
+    color: 'green',
+  },
+  fail: {
+    color: 'red',
+  },
   linearColorPrimary: {
     backgroundColor: '#b2dfdb',
   },
@@ -20,15 +29,15 @@ const styles = ({
 });
 
 let id = 0;
-function createData(commit, status) {
+function createData(name, status) {
   id += 1;
-  return { id, commit, status };
+  return { id, name, status };
 }
 
 const rows = [
-  createData('#12345', 'progress'),
-  createData('#12343', 'done'),
-  createData('#3232', 'failed'),
+  createData('Alex', 'progress'),
+  createData('Marc', 'done'),
+  createData('Peter', 'failed'),
 ];
 
 function App(props) {
@@ -41,10 +50,16 @@ function App(props) {
       </header>
       <main>
         <section>
+        <LinearProgress
+          classes={{
+            colorPrimary: classes.linearColorPrimary,
+            barColorPrimary: classes.linearBarColorPrimary,
+          }}
+        />
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
-              <TableCell>commit</TableCell>
+              <TableCell>developer</TableCell>
               <TableCell align="right">status</TableCell>
             </TableRow>
           </TableHead>
@@ -52,14 +67,11 @@ function App(props) {
             {rows.map(row => (
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
-                  {row.commit}
+                  {row.name}
                 </TableCell>
                 <TableCell align="right">
-                  <LinearProgress
-                    classes={{
-                      colorPrimary: classes.linearColorPrimary,
-                      barColorPrimary: classes.linearBarColorPrimary,
-                    }}
+                  <Chip
+                    label={row.status}
                   />
                 </TableCell>
               </TableRow>
