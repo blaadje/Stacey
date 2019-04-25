@@ -21,6 +21,16 @@
   color: #61dafb;
 }
 
+.header {
+  padding: 1rem;
+  padding-left: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #93939f;
+  text-align: left;
+  background: #fbfbfc;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

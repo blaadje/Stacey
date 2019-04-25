@@ -12,8 +12,7 @@ export const getColorFromStatus = status => {
   }
 }
 
-export const getDarkenColor = col => {
-  const amt = -80;
+export const getDarkenColor = (col, amt = -80) => {
   let usePound = false;
 
   if (col[0] === "#") {
