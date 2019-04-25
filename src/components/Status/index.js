@@ -25,14 +25,14 @@ class Status extends Component {
       return (
         <section>
           <header className="header">current deployment status</header>
-          <div className="wrapper">
+          <div className="Status-wrapper">
             <Avatar
-              className="avatar"
+              className="Status-avatar"
               src={deploymentStatus.deployer.img}
             />
-            <div className="contentWrapper">
+            <div className="Status-contentWrapper">
               <LinearProgress
-                className="loadingBar"
+                className="Status-loadingBar"
                 variant={deploymentStatus.status !== 'ongoing' ? 'determinate' : 'indeterminate'}
                 classes={{
                   colorPrimary: classes.linearColorPrimary,
@@ -40,13 +40,13 @@ class Status extends Component {
                 }}
               />
               <div>
-                <div className="hash">
-                  <span className="label">HASH</span>
-                  <span className="field">{ deploymentStatus.hash }</span>
+                <div className="Status-hash">
+                  <span className="Status-label">HASH</span>
+                  <span className="Status-field">{ deploymentStatus.hash }</span>
                 </div>
                 <div>
-                  <span className="label">commit</span>
-                  <span className="field">{ deploymentStatus.commit }</span>
+                  <span className="Status-label">commit</span>
+                  <span className="Status-field">{ deploymentStatus.commit }</span>
                 </div>
               </div>
             </div>
