@@ -1,4 +1,8 @@
-import { GET_DEPLOYS } from './constants'
+import {
+  GET_DEPLOYS,
+  TOGGLE_NOTIFICATIONS,
+  TOGGLE_PELLET
+} from './constants'
 
 const deploys = (state, action) => {
   switch (action.type) {
@@ -6,7 +10,17 @@ const deploys = (state, action) => {
       return {
         ...state,
         deploys: action.deploys,
-        currentDeploy: deploys[0],
+        currentDeploy: action.deploys[0],
+      }
+    case TOGGLE_NOTIFICATIONS:
+      return {
+        ...state,
+        notification: !state.notification
+      }
+    case TOGGLE_PELLET:
+      return {
+        ...state,
+        pellet: !state.pellet
       }
 
     default:

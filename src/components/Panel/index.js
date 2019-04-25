@@ -2,7 +2,7 @@ import React from 'react';
 
 import Status from '../Status'
 import History from '../History'
-import Options from '../Options'
+import Options from '../../containers/Options'
 
 import './style.css';
 import ShortCut from '../Shortcut';
