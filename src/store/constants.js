@@ -1,0 +1,1 @@
+export const GET_DEPLOYS = 'application/GET_DEPLOYS'
