@@ -1,6 +1,8 @@
-.wrapper {
-  margin-top: 2rem;
-  margin-left: 2rem;
+.Pellet-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   background: white;
   border-top-left-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
@@ -11,17 +13,23 @@
   cursor: pointer;
 }
 
-.pelletWrapper {
+.Pellet-wrapper:hover {
+  transition: all .5s ease-in-out;
+  transform: translateX(-5px) translateY(-50%);
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.1);
+}
+
+.Pellet-pelletWrapper {
   padding: 1.4rem;
 }
 
-.pellet {
+.Pellet-pellet {
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 100%;
 }
 
-.arrowWrapper {
+.Pellet-arrowWrapper {
   height: 100%;
   align-items: center;
   display: flex;
@@ -29,7 +37,7 @@
   padding: 0 0.6rem;
 }
 
-.arrow::before {
+.Pellet-arrow::before {
   content: '⟩';
   display: block;
   font-size: 1.2rem;

@@ -2,21 +2,20 @@ import React, { Component } from 'react'
 import './style.css'
 import { getColorFromStatus } from '../../utils'
 
-class ModuleTimer extends Component {
-  constructor (args) {
-    super(args)
-  }
-
+class Pellet extends Component {
   render () {
     return (
-      <div className="wrapper">
-        <div className="arrowWrapper">
-          <div className="arrow" />
+      <div
+        {...this.props}
+        className="Pellet-wrapper"
+      >
+        <div className="Pellet-arrowWrapper">
+          <div className="Pellet-arrow" />
         </div>
-        <div className="pelletWrapper">
+        <div className="Pellet-pelletWrapper">
           <div
             style={{ background: getColorFromStatus(this.props.status) }}
-            className="pellet"
+            className="Pellet-pellet"
           />
         </div>
       </div>
@@ -24,4 +23,4 @@ class ModuleTimer extends Component {
   }
 }
 
-export default ModuleTimer
+export default Pellet
