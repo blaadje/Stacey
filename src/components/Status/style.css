@@ -42,3 +42,7 @@
   width: 6rem !important;
   height: 6rem !important;
 }
+.Status-hash,
+.Status-commit {
+  font-size: 16px;
+}

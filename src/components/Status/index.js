@@ -44,7 +44,7 @@ class Status extends Component {
                   <span className="Status-label">HASH</span>
                   <span className="Status-field">{ deploymentStatus.hash }</span>
                 </div>
-                <div>
+                <div className="Status-commit">
                   <span className="Status-label">commit</span>
                   <span className="Status-field">{ deploymentStatus.commit }</span>
                 </div>
