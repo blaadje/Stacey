@@ -8,10 +8,10 @@ div.id = "stacey"
 
 link.type = 'text/css'
 link.rel = 'stylesheet'
-link.href = 'https://raw.githubusercontent.com/blaadje/stacey/master/build/static/css/main.798b7763.chunk.css'
+link.href = 'https://cdn.jsdelivr.net/gh/blaadje/stacey@master/build/static/css/main.798b7763.chunk.css'
 
-script1.setAttribute('src', 'https://raw.githubusercontent.com/blaadje/stacey/master/build/static/js/2.ee793906.chunk.js')
-script2.setAttribute('src', 'https://raw.githubusercontent.com/blaadje/stacey/master/build/static/js/main.60960333.chunk.js')
+script1.setAttribute('src', 'https://cdn.jsdelivr.net/gh/blaadje/stacey@master/build/static/js/main.60960333.chunk.js')
+script2.setAttribute('src', 'https://cdn.jsdelivr.net/gh/blaadje/stacey@master/build/static/js/2.ee793906.chunk.js')
 
 document.body.appendChild(div)
 document.body.appendChild(link)
