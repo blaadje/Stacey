@@ -6,9 +6,9 @@ div.id = "stacey"
 
 link.type = 'text/css'
 link.rel = 'stylesheet'
-link.href = 'https://cdn.jsdelivr.net/gh/blaadje/stacey@latest/build/static/css/main.10919efc.chunk.css'
+link.href = 'https://cdn.jsdelivr.net/gh/blaadje/stacey@latest/build/static/css/main.aaf22d29.chunk.css'
 
-script1.setAttribute('src', 'https://cdn.jsdelivr.net/gh/blaadje/stacey@latest/build/static/js/main.c045efa9.chunk.js')
+script1.setAttribute('src', 'https://cdn.jsdelivr.net/gh/blaadje/stacey@latest/build/static/js/main.4b92d8b4.chunk.js')
 script2.setAttribute('src', 'https://cdn.jsdelivr.net/gh/blaadje/stacey@latest/build/static/js/2.ee793906.chunk.js')
 
 document.body.appendChild(div)
