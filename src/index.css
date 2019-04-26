@@ -7,9 +7,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#stacey {
-  position: fixed;
-  right: 0;
-  top: 0
-}
